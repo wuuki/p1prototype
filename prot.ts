@@ -1,5 +1,4 @@
 abstract class Shape {
-    
     x:number;
     y:number;
     color:string;
@@ -9,13 +8,10 @@ abstract class Shape {
         this.y=y;
         this.color=color;
     }
-
-    abstract clone():Shape; 
-    
+    abstract clone():Shape;
 }
 
 class Rectangle extends Shape {
-
     width:number;
     height:number;
 
@@ -23,44 +19,37 @@ class Rectangle extends Shape {
         super(x,y,color);
         this.width=width;
         this.height=height;
-    }
-    
+    }    
     area():number {
         return this.width * this.height;
     }
-
     makeLong():void {
         this.width *=2;
     }
-
     clone():Rectangle {
         return new Rectangle (this.x, this.y, this.color, this.width, this.height);
     }
 }
 
 class Circle extends Shape {
-
     radius:number;
     
     constructor (x:number, y:number, color:string, radius:number) {
         super(x,y,color);
         this.radius=radius;
     }
-
     area():number {
         return this.radius**2 * 3.14;
     }
-
     makeBig(rate:number):void {
         this.radius *= rate;
     }
-
     clone():Circle {
         return new Circle (this.x, this.y, this.color, this.radius);
     }
 }
 
-//дальше всякие тесты
+//РґР°Р»СЊС€Рµ РІСЃСЏРєРёРµ С‚РµСЃС‚С‹
 let r1 = new Rectangle(1,1,"red",5,7);
 alert(r1.area());
 r1.makeLong();
