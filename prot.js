@@ -37,7 +37,7 @@ class Circle extends Shape {
         return new Circle(this.x, this.y, this.color, this.radius);
     }
 }
-//дальше всякие тесты
+//РґР°Р»СЊС€Рµ РІСЃСЏРєРёРµ С‚РµСЃС‚С‹
 let r1 = new Rectangle(1, 1, "red", 5, 7);
 alert(r1.area());
 r1.makeLong();
